@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Recipe page</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @font-face {
+      font-family: 'Young Serif Regular';
+      src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Outfit';
+      src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    }
+  </style>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-rose800: #7A284E;
+      --color-rose50: #FFF7FB;
+      --color-stone900: #312E2C;
+      --color-stone600: #5F564D;
+      --color-stone150: #E3DDD7;
+      --color-stone100: #F3E5D7;
+      --color-brown800: #854632; 
+      --font-yserif: 'Young Serif Regular', sans-serif;
+      --font-outfit: 'Outfit', sans-serif;
+      --text-x40: 40px;
+      --text-x28: 28px;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center bg-stone100 m-0">
+  <div class="flex flex-col items-center gap-10 bg-white w-full sm:max-w-[735px] box-border sm:p-10 sm:my-32 sm:rounded-3xl ease-in-out" id="layer-1"> <!-- between element gap=40px -->
+    <img class="rounded-xl" alt="omelette recipe result demo image" src="./assets/images/image-omelette.jpeg">
+    <div class="flex flex-col gap-8" id="layer-2"> <!-- between element gap=32px -->
+      <div class="flex flex-col gap-6" id="layer-3"> <!-- between element gap=24px -->
+        <h1 class="text-stone900 text-x40 font-yserif leading-none" id="recipe-title">Simple Omelette Recipe</h1>
+        <p class="text-stone600 text-base/6 font-outfit font-light tracking-normal" id="recipe-summary">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+          to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+      </div>
+      <div class="flex flex-col gap-4 bg-rose50 rounded-xl p-6" id="preparation-wrapper">
+        <h3 class="text-rose800 text-xl/none font-outfit font-semibold" id="preparation-title">Preparation time</h3>
+        <ul class="flex flex-col gap-2 list-disc list-inside marker:text-sm marker:text-rose800">
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2"><em class="font-semibold not-italic pl-4">Total</em>: Approximately 10 minutes</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2"><em class="font-semibold not-italic pl-4">Preparation</em>: 5 minutes</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2"><em class="font-semibold not-italic pl-4">Cooking</em>: 5 minutes</li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-6" id="layer-3">
+        <h2 class="text-brown800 text-x28 font-yserif leading-none" id="ingredients-title">Ingredients</h2>
+        <ul class="flex flex-col gap-2 list-disc list-inside marker:text-sm marker:text-brown800" id="ingredients-list">
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2">2-3 large eggs</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2">Salt, to taste</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2">Pepper, to taste</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2">1 tablespoon of butter or oil</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+        </ul>
+      </div>
+      <hr class="text-stone150">
+      <div class="flex flex-col gap-6" id="layer-3">
+        <div class="text-brown800 text-x28 font-yserif leading-none" id="instructions-title">Instructions</div>
+        <ol class="flex flex-col gap-2 list-decimal list-inside marker:font-semibold marker:text-brown800" id="instructions-list">
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2"><em class="font-semibold not-italic pl-4">Beat the eggs</em>: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+            You can add a tablespoon of water or milk for a fluffier texture.</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2"><em class="font-semibold not-italic pl-4">Heat the pan</em>: Place a non-stick frying pan over medium heat and add butter or oil.</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2"><em class="font-semibold not-italic pl-4">Cook the omelette</em>: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+            the eggs evenly coat the surface.</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2"><em class="font-semibold not-italic pl-4">Add fillings (optional)</em>: When the eggs begin to set at the edges but are still slightly runny in the 
+            middle, sprinkle your chosen fillings over one half of the omelette.</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2"><em class="font-semibold not-italic pl-4">Fold and serve</em>: As the omelette continues to cook, carefully lift one edge and fold it over the 
+            fillings. Let it cook for another minute, then slide it onto a plate.</li>
+          <li class="text-stone600 text-base/6 font-outfit font-light pl-2"><em class="font-semibold not-italic pl-4">Enjoy</em>: Serve hot, with additional salt and pepper if needed.</li>
+        </ol>
+      </div>
+      <hr class="text-stone150">
+      <div class="flex flex-col gap-6" id="layer-3">
+        <h2 class="text-brown800 text-x28 font-yserif leading-none" id="nutrition-title">Nutrition</h2>
+        <p class="text-stone600 text-base/6 font-outfit font-light" id="nutrition-comment">The table below shows nutritional values per serving without the additional fillings.</p>
+        <dl class="flex flex-col gap-3">
+          <div class="flex gap-4 mx-8">
+            <dt class="text-stone600 text-base/6 font-outfit font-light inline-block w-1/2">Calories</dt>
+            <dd class="text-brown800 text-base/6 font-outfit font-semibold inline-block w-1/2">277kcal</dd>
+          </div>
+          <hr class="text-stone150">
+          <div class="flex gap-4 mx-8">
+            <dt class="text-stone600 text-base/6 font-outfit font-light inline-block w-1/2">Carbs</dt>
+            <dd class="text-brown800 text-base/6 font-outfit font-semibold inline-block w-1/2">0g</dd>
+          </div>
+          <hr class="text-stone150">
+          <div class="flex gap-4 mx-8">
+            <dt class="text-stone600 text-base/6 font-outfit font-light inline-block w-1/2">Protein</dt>
+            <dd class="text-brown800 text-base/6 font-outfit font-semibold inline-block w-1/2">20g</dd>
+          </div>
+          <hr class="text-stone150">
+          <div class="flex gap-4 mx-8">
+            <dt class="text-stone600 text-base/6 font-outfit font-light inline-block w-1/2">Fat</dt>
+            <dd class="text-brown800 text-base/6 font-outfit font-semibold inline-block w-1/2">22g</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a class="underline text-brown800" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="underline text-brown800" href="https://github.com/wxyzz22">Xingya Wang</a>.
+  </div>
+</body>
+</html>
